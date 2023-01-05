@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'JetBrains-Regular';
+    src: url('../src/assets/fonts/JetBrainsMono-Regular.ttf')
+}
+
+@font-face {
+    font-family: 'Jetbrains-LightItalic';
+    src: url('../src/assets/fonts/JetBrainsMono-LightItalic.ttf')
+}
+
+@font-face {
+    font-family: 'Jetbrains-Black';
+    src: url('../src/assets/fonts/JetBrainsMono-Regular.ttf')
+}
+
+@font-face {
+    font-family: 'Jetbrains-Bold';
+    src: url('../src/assets/fonts/JetBrainsMono-Bold.ttf')
+}
