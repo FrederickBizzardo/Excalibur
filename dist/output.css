@@ -513,9 +513,37 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.flex {
+  display: flex;
+}
+
+.list-none {
+  list-style-type: none;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
 .bg-drakGray {
   --tw-bg-opacity: 1;
   background-color: rgb(41 41 41 / var(--tw-bg-opacity));
+}
+
+.p-new3 {
+  padding: 3rem 5rem;
+}
+
+.p-new4 {
+  padding: 0 2rem;
+}
+
+.p-new2 {
+  padding: 5rem 0;
+}
+
+.p-new1 {
+  padding: 0.5rem 0;
 }
 
 .font-JetBrains {
@@ -539,17 +567,14 @@ video {
   line-height: 2.25rem;
 }
 
-.font-bold {
-  font-weight: 700;
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.underline {
-  text-decoration-line: underline;
 }
 
 @font-face {
