@@ -14,13 +14,18 @@ module.exports = {
       colors: {
         'drakGray': '#292929',
         'lightGray': '#707070',
+        'lighterGray': '#363636',
+        'lighterGray2': '#4A4A4A',
       },
       padding: {
         'new1': '0.5rem 0',
         'new2': '5rem 0',
         'new3': '2rem 3rem',
         'new4': '0 2rem',
-        'new5': '0.5rem 3rem',
+        'new5': '0.2rem 0.3rem',
+        'new6': '2rem 5rem',
+        '46px': '46px',
+        '47px': '47px',
       }
     },
   },
