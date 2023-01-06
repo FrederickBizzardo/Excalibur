@@ -533,8 +533,8 @@ video {
   list-style-type: none;
 }
 
-.flex-col {
-  flex-direction: column;
+.justify-start {
+  justify-content: flex-start;
 }
 
 .justify-end {
@@ -598,6 +598,14 @@ video {
   padding: 0.5rem 0;
 }
 
+.p-0 {
+  padding: 0px;
+}
+
+.p-1 {
+  padding: 0.25rem;
+}
+
 .font-JetBrains {
   font-family: JetBrains-Regular;
 }
@@ -659,14 +667,14 @@ video {
   src: url('../src/assets/fonts/JetBrainsMono-Bold.ttf')
 }
 
-.hover\:bg-lightGray:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(112 112 112 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-lighterGray2:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(74 74 74 / var(--tw-bg-opacity));
+}
+
+.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
 @media (min-width: 1024px) {
