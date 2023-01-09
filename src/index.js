@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, Menu } = require('electron');
 const path = require('path');
 
 
@@ -26,6 +26,23 @@ const createWindow = () => {
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
+
+  // Declare all menu
+  /*const menu_list = [
+    {
+      label: "File",
+      submenu: [
+        {
+          label: "Open File...",
+          click: function () {
+            console.log("Open File Clicked");
+          },
+        },
+      ],
+    },
+  ];
+  const menu_design = Menu.buildFromTemplate(menu_list);
+  Menu.setApplicationMenu(menu_design);*/
 };
 
 // This method will be called when Electron has finished

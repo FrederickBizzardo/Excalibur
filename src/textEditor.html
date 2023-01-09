@@ -7,13 +7,19 @@
     <link href="../dist/output.css" rel="stylesheet">
   </head>
   <body class="font-JetBrains bg-drakGray text-white">
-    <div class="h-14 p-new5 w-full border border-lightGray border-x-0">
-      <button onclick="window.location.href='index.html';" class="border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-46px w-47px"><img class="p-2" src="../src/assets/images/home.svg"/></button>
+    <div class=" select-none h-14 p-new5 w-full border border-lightGray border-x-0">
+      <button onclick="window.location.href='index.html';" class="border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px"><img class="p-2 h-26px w-27px" src="../src/assets/images/home.svg"/></button>
     </div>
-    <div class="flex justify-start">
-        <div contenteditable="true" class="overflow-none focus:outline-none bg-drakGray border border-lightGray border-y-0 w-full name="textEditor" rows="1" cols="75">
+    <!--<div class="flex break-words flex-wrap justify-start border border-lightGray border-y-0">
+        <div ContentEditable="true" class="p-10  overflow-hidden focus:outline-none bg-drakGray  w-full name="textEditor" rows="1" cols="75">
 
         </div>
-    </div>
+    </div>-->
+    <textarea class="bg-drakGray focus:outline-none w-full resize-none"
+    id="greet-input"
+    
+    placeholder="Start typing some code..."
+  ></textarea>
+    
   </body>
 </html>

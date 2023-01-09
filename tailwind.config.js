@@ -24,6 +24,8 @@ module.exports = {
         'new4': '0 2rem',
         'new5': '0.2rem 0.3rem',
         'new6': '2rem 5rem',
+        '26px': '26px',
+        '27px': '27px',
         '46px': '46px',
         '47px': '47px',
       }
