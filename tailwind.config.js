@@ -28,6 +28,9 @@ module.exports = {
         '27px': '27px',
         '46px': '46px',
         '47px': '47px',
+      },
+      minHeight: {
+        '400': '400px',
       }
     },
   },
