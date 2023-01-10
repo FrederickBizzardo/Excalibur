@@ -5,8 +5,14 @@
     <title>Excalibur</title>
     <!--<link rel="stylesheet" href="index.css" />-->
     <link href="../dist/output.css" rel="stylesheet">
-    <link href="../src/assets/css/prism.css" rel="stylesheet">
+    <!--<link href="../src/assets/css/prism.css" rel="stylesheet">-->
+   <link href="../src/assets/css/codemirror.css" rel="stylesheet">
+   <link href="../src/assets/css/abbott.css" rel="stylesheet">
+   <link href="../src/assets/css/dracula.css" rel="stylesheet">
+   <link href="../src/assets/css/blackboard.css" rel="stylesheet">
 
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.css"></link>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/theme/abbott.min.css"></link>
   </head>
   <body class="font-JetBrains bg-drakGray text-white ">
     <div class="flex select-none h-42px p-1new5 w-full border border-lightGray border-x-0">
@@ -28,16 +34,38 @@
   ></textarea>
   <pre id="highlighting" aria-hidden="true"><code class="language-javascript" id="highlighting-content">import Prism from 'prismjs';</code></pre>
   </div>-->
-  <div style="height: 200px;" class="bg-drakGray">
-    <textarea class="line-numbers focus:outline-none w-full min-h-400 max-h-80 resize-none" placeholder="Start typing some code..." id="editing" spellcheck="false" oninput="update(this.value); sync_scroll(this);" onscroll="sync_scroll(this);" onkeydown="check_tab(this, event);"></textarea>
-    <pre id="highlighting" class="line-numbers w-full min-h-400 max-h-80 resize-none" aria-hidden="true">
-    <code class="language-html" id="highlighting-content">
+  <!--<div style="height: 200px;" class="bg-drakGray">
+    <textarea class="focus:outline-none w-full min-h-400 max-h-80 resize-none" placeholder="Start typing some code..." id="editing" spellcheck="false" oninput="update(this.value); sync_scroll(this);" onscroll="sync_scroll(this);" onkeydown="check_tab(this, event);"></textarea>
+    <pre id="highlighting" class=" w-full min-h-400 max-h-80 resize-none" aria-hidden="true">
+    <code class="language-html" id="highlighting-content">-->
+
+      <textarea id="code" class="font-JetBrains" name="code">if($cool_variable) {
+        doTheCoolThing();     # it's PRETTY cool, imho
+    }</textarea>
     
     <!--&lt;span title=&quot;Start Typing&quot;&gt;Just start typing!&lt;/span&gt;-->
     </code>
     </pre>
     </div>
+    <script>
+    window.onload = function() {
+      var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
+              mode: "text/x-perl",
+              lineNumbers: true,
+              foldGutter: true,
+              theme: 'blackboard',
+              gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter", "CodeMirror-lint-markers"],
+              lint: true
+          });
+      }
+      </script>
     <!--<script src="/src/assets/js/index.js"></script>-->
-    <script src="../src/assets/js/prism.js"></script>
+    <script language="javascript" type="text/javascript" src="../src/assets/js/codemirror.js"></script>
+    <script language="javascript" type="text/javascript" src="../src/assets/js/matchbrackets.js"></script>
+    <script language="javascript" type="text/javascript" src="../src/assets/perl/perl.js"></script>
+    <script language="javascript" type="text/javascript" src="../src/assets/js/javascript.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/perl/perl.min.js"></script>
+    <!--<script src="../src/assets/js/prism.js"></script>-->
   </body>
 </html>
