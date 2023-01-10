@@ -118,10 +118,10 @@
 
 /* DEFAULT THEME */
 
-.cm-s-default .cm-header {color: blue;}
-.cm-s-default .cm-quote {color: #090;}
-.cm-negative {color: #d44;}
-.cm-positive {color: #292;}
+.cm-s-default .cm-header {color: rgb(113, 113, 255);}
+.cm-s-default .cm-quote {color: rgb(87, 149, 87);}
+.cm-negative {color: rgb(223, 110, 110);}
+.cm-positive {color: rgb(93, 192, 93);}
 .cm-header, .cm-strong {font-weight: bold;}
 .cm-em {font-style: italic;}
 .cm-link {text-decoration: underline;}
@@ -156,8 +156,8 @@
 
 /* Default styles for common addons */
 
-div.CodeMirror span.CodeMirror-matchingbracket {color: #0b0;}
-div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #a22;}
+div.CodeMirror span.CodeMirror-matchingbracket {color: rgb(103, 205, 103);}
+div.CodeMirror span.CodeMirror-nonmatchingbracket {color: rgb(195, 102, 102);}
 .CodeMirror-matchingtag { background: rgba(255, 150, 0, .3); }
 .CodeMirror-activeline-background {background: #e8f2ff;}
 
