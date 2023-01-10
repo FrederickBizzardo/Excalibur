@@ -10,7 +10,7 @@
    <link href="../src/assets/css/abbott.css" rel="stylesheet">
    <link href="../src/assets/css/dracula.css" rel="stylesheet">
    <link href="../src/assets/css/blackboard.css" rel="stylesheet">
-
+    <link href="../src/assets/addon/hint/show-hint.css" rel="stylesheet">
   </head>
   <body class="font-JetBrains bg-drakGray text-white ">
     <div class="flex select-none h-42px p-1new5 w-full border border-lightGray border-x-0">
@@ -37,7 +37,7 @@
     <pre id="highlighting" class=" w-full min-h-400 max-h-80 resize-none" aria-hidden="true">
     <code class="language-html" id="highlighting-content">-->
 
-      <textarea id="code" name="code"></textarea>
+      <textarea id="code" name="code" class="text-lightGray" placeholder="Start typing some code..."></textarea>
     
     <!--&lt;span title=&quot;Start Typing&quot;&gt;Just start typing!&lt;/span&gt;-->
     </code>
@@ -46,22 +46,26 @@
     <script>
     window.onload = function() {
       var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
-              mode: "text/html",
+              mode: "css",
               lineNumbers: true,
               foldGutter: true,
               /*theme: 'abbott',*/
               gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter", "CodeMirror-lint-markers"],
-              lint: true
+              lint: true,
+              extraKeys: {"Ctrl-Space": "autocomplete"}
           });
       }
       </script>
     <!--<script src="/src/assets/js/index.js"></script>-->
+    <script language="javascript" type="text/javascript" src="../src/assets/addon/hint/show-hint.js"></script>
     <script language="javascript" type="text/javascript" src="../src/assets/js/codemirror.js"></script>
     <script language="javascript" type="text/javascript" src="../src/assets/js/matchbrackets.js"></script>
     <script language="javascript" type="text/javascript" src="../src/assets/mode/perl/perl.js"></script>
     <script language="javascript" type="text/javascript" src="../src/assets/mode/xml/xml.js"></script>
     <script language="javascript" type="text/javascript" src="../src/assets/mode/python/python.js"></script>
     <script language="javascript" type="text/javascript" src="../src/assets/js/javascript.js"></script>
+    <script language="javascript" type="text/javascript" src="../src/assets/mode/css/css.js"></script>
+    <script language="javascript" type="text/javascript" src="../src/assets/addon/hint/css-hint.js"></script>
     <!--<script src="../src/assets/js/prism.js"></script>-->
   </body>
 </html>
