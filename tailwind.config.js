@@ -16,6 +16,7 @@ module.exports = {
         'lightGray': '#707070',
         'lighterGray': '#363636',
         'lighterGray2': '#4A4A4A',
+        'textGray': '#ACACAC',
       },
       padding: {
         'new1': '0.5rem 0',
