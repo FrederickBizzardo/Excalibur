@@ -591,8 +591,8 @@ video {
   display: none;
 }
 
-.h-14 {
-  height: 3.5rem;
+.h-42px {
+  height: 42px;
 }
 
 .max-h-80 {
@@ -601,10 +601,6 @@ video {
 
 .min-h-400 {
   min-height: 400px;
-}
-
-.min-h-450 {
-  min-height: 450px;
 }
 
 .w-full {
@@ -688,8 +684,8 @@ video {
   background-color: rgb(54 54 54 / var(--tw-bg-opacity));
 }
 
-.p-new5 {
-  padding: 0.2rem 0.3rem;
+.p-1new5 {
+  padding: 0.2rem 0.2rem;
 }
 
 .p-2 {

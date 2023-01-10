@@ -23,6 +23,7 @@ module.exports = {
         'new3': '2rem 3rem',
         'new4': '0 2rem',
         'new5': '0.2rem 0.3rem',
+        '1new5': '0.2rem 0.2rem',
         'new6': '2rem 5rem',
         '26px': '26px',
         '27px': '27px',
@@ -32,6 +33,9 @@ module.exports = {
       minHeight: {
         '400': '400px',
         '450': '450px',
+      },
+      height: {
+        '42px': '42px',
       }
     },
   },
