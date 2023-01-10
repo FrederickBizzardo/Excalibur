@@ -11,8 +11,6 @@
    <link href="../src/assets/css/dracula.css" rel="stylesheet">
    <link href="../src/assets/css/blackboard.css" rel="stylesheet">
 
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.css"></link>
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/theme/abbott.min.css"></link>
   </head>
   <body class="font-JetBrains bg-drakGray text-white ">
     <div class="flex select-none h-42px p-1new5 w-full border border-lightGray border-x-0">
@@ -39,9 +37,7 @@
     <pre id="highlighting" class=" w-full min-h-400 max-h-80 resize-none" aria-hidden="true">
     <code class="language-html" id="highlighting-content">-->
 
-      <textarea id="code" class="font-JetBrains" name="code">if($cool_variable) {
-        doTheCoolThing();     # it's PRETTY cool, imho
-    }</textarea>
+      <textarea id="code" name="code"></textarea>
     
     <!--&lt;span title=&quot;Start Typing&quot;&gt;Just start typing!&lt;/span&gt;-->
     </code>
@@ -50,10 +46,10 @@
     <script>
     window.onload = function() {
       var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
-              mode: "text/x-perl",
+              mode: "text/x-python",
               lineNumbers: true,
               foldGutter: true,
-              theme: 'blackboard',
+              theme: 'abbott',
               gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter", "CodeMirror-lint-markers"],
               lint: true
           });
@@ -62,10 +58,9 @@
     <!--<script src="/src/assets/js/index.js"></script>-->
     <script language="javascript" type="text/javascript" src="../src/assets/js/codemirror.js"></script>
     <script language="javascript" type="text/javascript" src="../src/assets/js/matchbrackets.js"></script>
-    <script language="javascript" type="text/javascript" src="../src/assets/perl/perl.js"></script>
+    <script language="javascript" type="text/javascript" src="../src/assets/mode/perl/perl.js"></script>
+    <script language="javascript" type="text/javascript" src="../src/assets/mode/python/python.js"></script>
     <script language="javascript" type="text/javascript" src="../src/assets/js/javascript.js"></script>
-    <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.js"></script>
-    <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/perl/perl.min.js"></script>
     <!--<script src="../src/assets/js/prism.js"></script>-->
   </body>
 </html>

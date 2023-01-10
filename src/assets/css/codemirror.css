@@ -1,17 +1,26 @@
 @font-face {
   font-family: 'JetBrains-Regular';
-  src: url('../fonts/JetBrainsMono-Regular.ttf')
+  src: url('../src/assets/fonts/JetBrainsMono-Regular.ttf')
 }
-
 
 /* BASICS */
 
 .CodeMirror {
   /* Set height, width, borders, and global font properties here */
+  /*font-family: monospace;*/
   font-family: 'JetBrains-Regular';
-  height: 300px;
-  color: black;
+  font-size: 12px;
+  height: 400px;
+  color: white;
   direction: ltr;
+  caret-color: white;
+  caret-shape:block;
+}
+
+@media only screen and (min-width: 900px) {
+  .CodeMirror {
+    height: 600px;
+  }
 }
 
 /* PADDING */
@@ -31,8 +40,9 @@
 /* GUTTER */
 
 .CodeMirror-gutters {
+  padding-right: 20px;
   border-right: 1px solid #ddd;
-  background-color: #f7f7f7;
+  background-color: #292929;
   white-space: nowrap;
 }
 .CodeMirror-linenumbers {}
@@ -158,7 +168,7 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #a22;}
 .CodeMirror {
   position: relative;
   overflow: hidden;
-  background: white;
+  background-color: #292929;
 }
 
 .CodeMirror-scroll {
@@ -244,7 +254,7 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #a22;}
   -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
   border-width: 0;
   background: transparent;
-  font-family: 'JetBrains-Regular';
+  font-family: inherit;
   font-size: inherit;
   margin: 0;
   white-space: pre;
