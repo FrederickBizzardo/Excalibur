@@ -130,7 +130,7 @@
 
 /* DEFAULT THEME */
 
-.cm-s-default .cm-header {color: rgb(113, 113, 255);}
+.cm-s-default .cm-header {color: rgb(146, 146, 255);}
 .cm-s-default .cm-quote {color: rgb(87, 149, 87);}
 .cm-negative {color: rgb(223, 110, 110);}
 .cm-positive {color: rgb(93, 192, 93);}
@@ -140,9 +140,9 @@
 .cm-strikethrough {text-decoration: line-through;}
 
 .cm-s-default .cm-keyword {color: rgb(238, 109, 255);}
-.cm-s-default .cm-atom {color: rgb(116, 109, 255);}
+.cm-s-default .cm-atom {color: rgb(146, 140, 255);}
 .cm-s-default .cm-number {color: rgb(59, 148, 112);}
-.cm-s-default .cm-def {color: rgb(85, 85, 255);}
+.cm-s-default .cm-def {color: rgb(142, 142, 255);}
 .cm-s-default .cm-variable,
 .cm-s-default .cm-punctuation,
 .cm-s-default .cm-property,
@@ -157,9 +157,9 @@
 .cm-s-default .cm-builtin {color: rgb(120, 88, 195);}
 .cm-s-default .cm-bracket {color: #997;}
 .cm-s-default .cm-tag {color: rgb(154, 255, 99);}
-.cm-s-default .cm-attribute {color: rgb(57, 57, 255);}
+.cm-s-default .cm-attribute {color: rgb(151, 151, 255);}
 .cm-s-default .cm-hr {color: #999;}
-.cm-s-default .cm-link {color: rgb(57, 57, 255);}
+.cm-s-default .cm-link {color: rgb(151, 151, 255);}
 
 .cm-s-default .cm-error {color: rgb(255, 101, 101);}
 .cm-invalidchar {color: rgb(255, 101, 101);}
