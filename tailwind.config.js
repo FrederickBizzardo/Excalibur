@@ -48,6 +48,9 @@ module.exports = {
       },
       maxHeight: {
         'newScreen': '95vh',
+      },
+      width: {
+        '30': '6.5rem'
       }
     },
   },

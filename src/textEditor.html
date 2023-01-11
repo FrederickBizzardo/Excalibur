@@ -15,14 +15,17 @@
 
     <div class="flex select-none h-42px p-1new5 w-full border bg-drakGray  border-lightGray border-x-0">
       <button onclick="window.location.href='index.html';" class="border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px"><img class="p-2 h-26px w-27px" src="../src/assets/images/home2.svg"/></button>
-      <button class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px px-2 py-2 ml-4">New File</button>
+      <button class="flex justify-between items-center font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-30 px-2 py-2 ml-4">
+        New File
+        <a href="../src/index.html"><img class="" src="../src/assets/images/close2.svg"></a>
+      </button>
     </div>
 
     <div class="">
       <textarea id="code" name="code" placeholder="Start typing some code..."></textarea>
     </div>
     
-    <footer class="flex justify-end flex-col items-end fixed right-0 bottom-0 left-0 p-4">
+    <footer class="select-none flex justify-end flex-col items-end fixed right-0 bottom-0 left-0 p-4">
       <div id="polyglot" class="hidden flex-col px-2 py-2 w-60 h-80 rounded-2xl bg-drakGray border border-lightGray mb-2">
         <button id="plainText" class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px px-2 py-2 mb-2">Plain Text</button>
         <button id="html" class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px px-2 py-2 mb-2">Html</button>
