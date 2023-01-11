@@ -11,14 +11,14 @@
   font-family: 'JetBrains-Regular';
   font-size: 12px;
   line-height: 20px;
-  height: 30rem;
+  height: 90vh;
   color: white;
   direction: ltr;
 }
 
 @media (min-height: 600px) and (min-width: 700px) {
   .CodeMirror {
-    height: 20rem;
+    height: 90vh;
   }
 }
 

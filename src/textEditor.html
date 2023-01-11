@@ -31,10 +31,10 @@
         var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
                 mode: "text/plain",
                 lineNumbers: true,
-                /*foldGutter: true,*/
+                foldGutter: true,
                 /*theme: 'abbott',*/
-                /*gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter", "CodeMirror-lint-markers"],
-                lint: true,*/
+                gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter", "CodeMirror-lint-markers"],
+                lint: true,
                 extraKeys: {"Ctrl-Space": "autocomplete"}
             });
         }
