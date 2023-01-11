@@ -12,13 +12,14 @@
   font-size: 12px;
   line-height: 20px;
   height: 90vh;
-  color: white;
+  min-height: 90vh;
+  max-height: 90vh;
   direction: ltr;
 }
 
 @media (min-height: 600px) and (min-width: 700px) {
   .CodeMirror {
-    height: 90vh;
+    height: 92vh;
   }
 }
 
@@ -138,8 +139,8 @@
 .cm-s-default .cm-comment {color: rgb(211, 149, 86);}
 .cm-s-default .cm-string {color: rgb(228, 113, 113);}
 .cm-s-default .cm-string-2 {color: rgb(255, 146, 91);}
-.cm-s-default .cm-meta {color: rgb(255, 255, 255);}
-.cm-s-default .cm-qualifier {color: rgb(255, 255, 255);}
+.cm-s-default .cm-meta {color: rgb(238, 159, 159);}
+.cm-s-default .cm-qualifier {color: rgb(233, 162, 162);}
 .cm-s-default .cm-builtin {color: rgb(120, 88, 195);}
 .cm-s-default .cm-bracket {color: #997;}
 .cm-s-default .cm-tag {color: rgb(154, 255, 99);}
@@ -315,7 +316,6 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {color: rgb(196, 79, 79);}
 .CodeMirror-cursor {
   position: absolute;
   pointer-events: none;
-  color: white;
   border-left: 3px solid white; /*This code is to chane the cursor color - caret color does not work but border does */ 
 }
 .CodeMirror-measure pre { position: static; }

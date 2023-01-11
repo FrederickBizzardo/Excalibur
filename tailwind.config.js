@@ -39,6 +39,9 @@ module.exports = {
       },
       height: {
         '42px': '42px',
+      },
+      zIndex: {
+        '999': '999',
       }
     },
   },
