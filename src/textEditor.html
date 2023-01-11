@@ -24,10 +24,10 @@
     
     <footer class="flex justify-end flex-col items-end fixed right-0 bottom-0 left-0 p-4">
       <div id="polyglot" class="hidden flex-col px-2 py-2 w-60 h-80 rounded-2xl bg-drakGray border border-lightGray mb-2">
-        <button id="checkAllTopicCheckBoxes" class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px px-2 py-2 mb-2">Plain Text</button>
-        <button id="checkAllTopicCheckBoxes" class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px px-2 py-2 mb-2">Html</button>
-        <button id="checkAllTopicCheckBoxes" class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px px-2 py-2 mb-2">CSS</button>
-        <button id="checkAllTopicCheckBoxes" class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px px-2 py-2 mb-2">JavaScript</button>
+        <button id="plainText" class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px px-2 py-2 mb-2">Plain Text</button>
+        <button id="html" class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px px-2 py-2 mb-2">Html</button>
+        <button id="css" class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px px-2 py-2 mb-2">CSS</button>
+        <button id="javascript" class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px px-2 py-2 mb-2">JavaScript</button>
       </div>
       <button id="toggleLang" class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px px-2 py-2 ml-4">Plain Text</button>
     </footer>
@@ -45,11 +45,32 @@
                 extraKeys: {"Ctrl-Space": "autocomplete"}
             });
     
-        document.getElementById ("checkAllTopicCheckBoxes").addEventListener ("click", myFunction, false);
+        // Plain Text
+        document.getElementById ("plainText").addEventListener ("click", usePlain, false);
 
-        function myFunction() {
+        function usePlain() {
+          editor.setOption('mode', 'text/plain');
+        }
+
+        // Html
+        document.getElementById ("html").addEventListener ("click", useHtml, false);
+
+        function useHtml() {
+          editor.setOption('mode', 'text/html');
+        }
+
+        // CSS
+        document.getElementById ("css").addEventListener ("click", useCSS, false);
+
+        function useCSS() {
+          editor.setOption('mode', 'text/css');
+        }
+
+        // JavaScript
+        document.getElementById ("javascript").addEventListener ("click", useJavaScript, false);
+
+        function useJavaScript() {
           editor.setOption('mode', 'text/javascript');
-    	        /*editor.setValue('console.log(true ? "True" : "False")');*/
         }
 
         document.getElementById ("toggleLang").addEventListener ("click", polyglotBtn, false);
