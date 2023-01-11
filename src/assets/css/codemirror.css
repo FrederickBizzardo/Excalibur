@@ -11,14 +11,14 @@
   font-family: 'JetBrains-Regular';
   font-size: 12px;
   line-height: 20px;
-  height: 400px;
+  height: 30rem;
   color: white;
   direction: ltr;
 }
 
 @media (min-height: 600px) and (min-width: 700px) {
   .CodeMirror {
-    height: 600px;
+    height: 20rem;
   }
 }
 
@@ -49,7 +49,7 @@
   padding: 0 3px 0 5px;
   min-width: 20px;
   text-align: right;
-  color: #999;
+  color: white;
   white-space: nowrap;
 }
 
@@ -138,8 +138,8 @@
 .cm-s-default .cm-comment {color: rgb(211, 149, 86);}
 .cm-s-default .cm-string {color: rgb(228, 113, 113);}
 .cm-s-default .cm-string-2 {color: rgb(255, 146, 91);}
-.cm-s-default .cm-meta {color: #555;}
-.cm-s-default .cm-qualifier {color: #555;}
+.cm-s-default .cm-meta {color: rgb(255, 255, 255);}
+.cm-s-default .cm-qualifier {color: rgb(255, 255, 255);}
 .cm-s-default .cm-builtin {color: rgb(120, 88, 195);}
 .cm-s-default .cm-bracket {color: #997;}
 .cm-s-default .cm-tag {color: rgb(154, 255, 99);}

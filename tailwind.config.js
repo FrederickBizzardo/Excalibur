@@ -19,6 +19,8 @@ module.exports = {
         'textGray': '#ACACAC',
       },
       padding: {
+        '1%': '6%',
+        '6%': '6%',
         'new1': '0.5rem 0',
         'new2': '5rem 0',
         'new3': '2rem 3rem',

@@ -5,58 +5,41 @@
     <title>Excalibur</title>
     <!--<link rel="stylesheet" href="index.css" />-->
     <link href="../dist/output.css" rel="stylesheet">
-    <!--<link href="../src/assets/css/prism.css" rel="stylesheet">-->
-   <link href="../src/assets/css/codemirror.css" rel="stylesheet">
-   <link href="../src/assets/css/abbott.css" rel="stylesheet">
-   <link href="../src/assets/css/dracula.css" rel="stylesheet">
-   <link href="../src/assets/css/blackboard.css" rel="stylesheet">
+    <link href="../src/assets/css/codemirror.css" rel="stylesheet">
+    <link href="../src/assets/css/abbott.css" rel="stylesheet">
+    <link href="../src/assets/css/dracula.css" rel="stylesheet">
+    <link href="../src/assets/css/blackboard.css" rel="stylesheet">
     <link href="../src/assets/addon/hint/show-hint.css" rel="stylesheet">
   </head>
   <body class="font-JetBrains bg-drakGray text-white ">
+
     <div class="flex select-none h-42px p-1new5 w-full border border-lightGray border-x-0">
       <button onclick="window.location.href='index.html';" class="border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px"><img class="p-2 h-26px w-27px" src="../src/assets/images/home2.svg"/></button>
-      <button class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px px-2 py-2 ml-2">New File</button>
+      <button class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px px-2 py-2 ml-4">New File</button>
     </div>
-    <!--<div class="flex break-words flex-wrap justify-start border border-lightGray border-y-0">
-        <div ContentEditable="true" data-placeholder='Enter a name...' class="editor p-10 overflow-hidden focus:outline-none bg-drakGray  w-full name="textEditor" rows="1" cols="75">
 
-        </div>
-    </div>-->
-  </div>
-
-  <!--<div class="">
-    <textarea class="txta language-javascript bg-drakGray focus:outline-none scroll w-full min-h-400 max-h-80 resize-none p-new3"
-    id="editing"
-    oninput="update(this.value); sync_scroll(this);" onscroll="sync_scroll(this);" onkeydown="check_tab(this, event);"
-    placeholder="Start typing some code..."
-  ></textarea>
-  <pre id="highlighting" aria-hidden="true"><code class="language-javascript" id="highlighting-content">import Prism from 'prismjs';</code></pre>
-  </div>-->
-  <!--<div style="height: 200px;" class="bg-drakGray">
-    <textarea class="focus:outline-none w-full min-h-400 max-h-80 resize-none" placeholder="Start typing some code..." id="editing" spellcheck="false" oninput="update(this.value); sync_scroll(this);" onscroll="sync_scroll(this);" onkeydown="check_tab(this, event);"></textarea>
-    <pre id="highlighting" class=" w-full min-h-400 max-h-80 resize-none" aria-hidden="true">
-    <code class="language-html" id="highlighting-content">-->
-
-      <textarea id="code" name="code" class="text-lightGray" placeholder="Start typing some code..."></textarea>
+    <div>
+      <textarea id="code" name="code"></textarea>
+    </div>
     
-    <!--&lt;span title=&quot;Start Typing&quot;&gt;Just start typing!&lt;/span&gt;-->
-    </code>
-    </pre>
-    </div>
+    <footer class="flex justify-end items-end absolute right-0 bottom-0 left-0 p-4">
+      <button class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px px-2 py-2 ml-4">Plain Text</button>
+    </footer>
+
     <script>
-    window.onload = function() {
-      var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
-              mode: "css",
-              lineNumbers: true,
-              foldGutter: true,
-              /*theme: 'abbott',*/
-              gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter", "CodeMirror-lint-markers"],
-              lint: true,
-              extraKeys: {"Ctrl-Space": "autocomplete"}
-          });
-      }
-      </script>
-    <!--<script src="/src/assets/js/index.js"></script>-->
+      window.onload = function() {
+        var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
+                mode: "text/plain",
+                lineNumbers: true,
+                /*foldGutter: true,*/
+                /*theme: 'abbott',*/
+                /*gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter", "CodeMirror-lint-markers"],
+                lint: true,*/
+                extraKeys: {"Ctrl-Space": "autocomplete"}
+            });
+        }
+    </script>
+
     <script language="javascript" type="text/javascript" src="../src/assets/addon/hint/show-hint.js"></script>
     <script language="javascript" type="text/javascript" src="../src/assets/js/codemirror.js"></script>
     <script language="javascript" type="text/javascript" src="../src/assets/js/matchbrackets.js"></script>
@@ -66,6 +49,5 @@
     <script language="javascript" type="text/javascript" src="../src/assets/js/javascript.js"></script>
     <script language="javascript" type="text/javascript" src="../src/assets/mode/css/css.js"></script>
     <script language="javascript" type="text/javascript" src="../src/assets/addon/hint/css-hint.js"></script>
-    <!--<script src="../src/assets/js/prism.js"></script>-->
   </body>
 </html>
