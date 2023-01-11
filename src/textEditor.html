@@ -22,15 +22,17 @@
       <textarea id="code" name="code" placeholder="Start typing some code..."></textarea>
     </div>
     
-    <footer class="flex justify-end items-end fixed right-0 bottom-0 left-0 p-4">
-      <button id="checkAllTopicCheckBoxes" class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px px-2 py-2 ml-4">Plain Text</button>
+    <footer class="flex justify-end flex-col items-end fixed right-0 bottom-0 left-0 p-4">
+      <div id="polyglot" class="hidden flex-col px-2 py-2 w-60 h-80 rounded-2xl bg-drakGray border border-lightGray mb-2">
+        <button id="checkAllTopicCheckBoxes" class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px px-2 py-2 mb-2">Plain Text</button>
+        <button id="checkAllTopicCheckBoxes" class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px px-2 py-2 mb-2">Html</button>
+        <button id="checkAllTopicCheckBoxes" class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px px-2 py-2 mb-2">CSS</button>
+        <button id="checkAllTopicCheckBoxes" class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px px-2 py-2 mb-2">JavaScript</button>
+      </div>
+      <button id="toggleLang" class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px px-2 py-2 ml-4">Plain Text</button>
     </footer>
 
     <script>
- 
-      
-
-
       window.onload = function() {
         
         var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
@@ -42,19 +44,26 @@
                 lint: true,
                 extraKeys: {"Ctrl-Space": "autocomplete"}
             });
-            function useJavaScript() {
-      
     
-}
-document.getElementById ("checkAllTopicCheckBoxes").addEventListener ("click", myFunction, false);
+        document.getElementById ("checkAllTopicCheckBoxes").addEventListener ("click", myFunction, false);
 
-function myFunction() {
-  editor.setOption('mode', 'text/javascript');
-    	/*editor.setValue('console.log(true ? "True" : "False")');*/
-}
+        function myFunction() {
+          editor.setOption('mode', 'text/javascript');
+    	        /*editor.setValue('console.log(true ? "True" : "False")');*/
         }
-    
 
+        document.getElementById ("toggleLang").addEventListener ("click", polyglotBtn, false);
+        
+        function polyglotBtn() {
+          var polygotBox = document.getElementById("polyglot");
+          if (polygotBox.style.display === "flex") {
+            polygotBox.style.display = "none";
+          } 
+          else {
+            polygotBox.style.display = "flex";
+          }
+        }
+      }
             
     </script>
 
