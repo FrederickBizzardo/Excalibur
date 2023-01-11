@@ -15,7 +15,10 @@
   min-height: 92vh;
   max-height: 92vh;
   direction: ltr;
+  
 }
+
+
 
 @media (min-height: 600px) and (min-width: 700px) {
   .CodeMirror {
@@ -179,6 +182,11 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {color: rgb(196, 79, 79);}
   position: relative;
   overflow: hidden;
   background-color: #292929;
+}
+
+.CodeMirror:after {
+  content: "Start typing some code...";
+  color: white;
 }
 
 .CodeMirror-scroll {
