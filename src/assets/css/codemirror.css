@@ -184,10 +184,6 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {color: rgb(196, 79, 79);}
   background-color: #292929;
 }
 
-.CodeMirror:after {
-  content: "Start typing some code...";
-  color: white;
-}
 
 .CodeMirror-scroll {
   overflow: scroll !important; /* Things will break if this is overridden */
