@@ -23,13 +23,18 @@
     </div>
     
     <footer class="flex justify-end items-end fixed right-0 bottom-0 left-0 p-4">
-      <button class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px px-2 py-2 ml-4">Plain Text</button>
+      <button id="checkAllTopicCheckBoxes" class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px px-2 py-2 ml-4">Plain Text</button>
     </footer>
 
     <script>
+ 
+      
+
+
       window.onload = function() {
+        
         var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
-                mode: "css",
+                mode: "text/plain ",
                 lineNumbers: true,
                 foldGutter: true,
                 /*theme: 'abbott',*/
@@ -37,7 +42,20 @@
                 lint: true,
                 extraKeys: {"Ctrl-Space": "autocomplete"}
             });
+            function useJavaScript() {
+      
+    
+}
+document.getElementById ("checkAllTopicCheckBoxes").addEventListener ("click", myFunction, false);
+
+function myFunction() {
+  editor.setOption('mode', 'text/javascript');
+    	editor.setValue('console.log(true ? "True" : "False")');
+}
         }
+    
+
+            
     </script>
 
     <script language="javascript" type="text/javascript" src="../src/assets/addon/hint/show-hint.js"></script>
@@ -52,3 +70,7 @@
     <script language="javascript" type="text/javascript" src="../src/assets/addon/display/placeholder.js"></script>
   </body>
 </html>
+
+
+
+
