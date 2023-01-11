@@ -42,6 +42,12 @@ module.exports = {
       },
       zIndex: {
         '999': '999',
+      },
+      height: {
+        'newScreen': '95vh',
+      },
+      maxHeight: {
+        'newScreen': '95vh',
       }
     },
   },

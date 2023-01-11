@@ -12,14 +12,24 @@
   font-size: 12px;
   line-height: 20px;
   height: 90vh;
-  min-height: 90vh;
-  max-height: 90vh;
+  min-height: 92vh;
+  max-height: 92vh;
   direction: ltr;
 }
 
 @media (min-height: 600px) and (min-width: 700px) {
   .CodeMirror {
+    min-height: 94vh;
+    max-height: 94vh;
     height: 92vh;
+  }
+}
+
+@media (min-height: 700px) and (min-width: 2000px) {
+  .CodeMirror {
+    min-height: 96vh;
+    max-height: 96vh;
+    height: 94vh;
   }
 }
 
