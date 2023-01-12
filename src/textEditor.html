@@ -46,8 +46,19 @@
                 /*theme: 'abbott',*/
                 gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter", "CodeMirror-lint-markers"],
                 lint: true,
-                extraKeys: {"Ctrl-Space": "autocomplete"}
+                /*extraKeys: {"Ctrl-Space": "autocomplete"}*/
+               /*extraKeys: {"Tab": "autocomplete"}*/
             });
+            /*editor.on('keyup', function(){
+    CodeMirror.commands.autocomplete(editor);
+});*/
+
+editor.on("keyup", function (cm, event) {
+if (!cm.state.completionActive &&   /*Enables keyboard navigation in autocomplete list*/
+     event.keyCode > 64 && event.keyCode < 91){// only when a letter key is pressed
+         CodeMirror.commands.autocomplete(cm, null, {completeSingle: false});
+    }
+});
     
         // Plain Text
         document.getElementById ("plainText").addEventListener ("click", usePlain, false);
@@ -75,6 +86,7 @@
 
         function useJavaScript() {
           editor.setOption('mode', 'text/javascript');
+          
         }
 
         document.getElementById ("toggleLang").addEventListener ("click", polyglotBtn, false);
