@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'JetBrains-Regular';
+  src: url('../src/assets/fonts/JetBrainsMono-Regular.ttf')
+}
+
+
 .CodeMirror-hints {
   position: absolute;
   z-index: 10;
@@ -11,11 +17,11 @@
   -moz-box-shadow: 2px 3px 5px rgba(0,0,0,.2);
   box-shadow: 2px 3px 5px rgba(0,0,0,.2);
   border-radius: 3px;
-  border: 1px solid silver;
+  border: 1px solid #707070;
 
-  background: white;
+  background: #363636;
   font-size: 90%;
-  font-family: monospace;
+  font-family: 'JetBrains-Regular';
 
   max-height: 20em;
   overflow-y: auto;
@@ -27,11 +33,11 @@
   padding: 0 4px;
   border-radius: 2px;
   white-space: pre;
-  color: black;
+  color:rgb(151, 206, 255);
   cursor: pointer;
 }
 
 li.CodeMirror-hint-active {
-  background: #08f;
+  background: #4A4A4A;
   color: white;
 }
