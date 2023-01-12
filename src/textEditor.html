@@ -5,14 +5,8 @@
     <title>Excalibur</title>
     <!--<link rel="stylesheet" href="index.css" />-->
     <link href="../dist/output.css" rel="stylesheet">
-    <link href="../src/assets/css/codemirror.css" rel="stylesheet">
-    <link href="../src/assets/css/abbott.css" rel="stylesheet">
-    <link href="../src/assets/css/dracula.css" rel="stylesheet">
-    <link href="../src/assets/css/blackboard.css" rel="stylesheet">
-
-    <link href="../src/assets/addon/hint/show-hint.css" rel="stylesheet">
   </head>
-  <body class="font-JetBrains bg-drakGray overflow-hidden">
+  <body class="font-JetBrains bg-drakGray overflow-hidden ">
 
     <div class="flex select-none h-42px p-1new5 w-full border bg-drakGray  border-lightGray border-x-0">
       <button onclick="window.location.href='index.html';" class="border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px"><img class="p-2 h-26px w-27px" src="../src/assets/images/home2.svg"/></button>
@@ -22,106 +16,43 @@
       </button>
     </div>
 
-    <div class="">
-      <textarea id="code" name="code" placeholder="Start typing some code..."></textarea>
+    <div id="container" class="font-JetBrains" style="width:800px;height:500px;border:1px solid grey">
     </div>
     
     <footer class="select-none    flex justify-end flex-col items-end fixed right-10 bottom-2 pb-4">
-      <div id="polyglot" class="hidden flex-col px-2 py-2 w-60 h-80 rounded-2xl bg-drakGray border border-lightGray mb-2">
+      <!--<div id="polyglot" class="hidden flex-col px-2 py-2 w-60 h-80 rounded-2xl bg-drakGray border border-lightGray mb-2">
         <button id="plainText" class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px px-2 py-2 mb-2">Plain Text</button>
         <button id="html" class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px px-2 py-2 mb-2">Html</button>
         <button id="css" class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px px-2 py-2 mb-2">CSS</button>
         <button id="javascript" class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px px-2 py-2 mb-2">JavaScript</button>
-      </div>
+      </div>-->
       <button id="toggleLang" class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px px-2 py-2 ml-4">Plain Text</button>
     </footer>
-
-    <script>
-      window.onload = function() {
-        
-        var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
-                mode: "text/plain",
-                lineNumbers: true,
-                foldGutter: true,
-                /*theme: 'abbott',*/
-                gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter", "CodeMirror-lint-markers"],
-                lint: true,
-                /*extraKeys: {"Ctrl-Space": "autocomplete"}*/
-               /*extraKeys: {"Tab": "autocomplete"}*/
-            });
-            /*editor.on('keyup', function(){
-    CodeMirror.commands.autocomplete(editor);
-});*/
-
-// Answer from Aditya Shankar
-editor.on("keyup", function (cm, event) {
-if (!cm.state.completionActive &&   /*Enables keyboard navigation in autocomplete list*/
-     event.keyCode > 64 && event.keyCode < 91){// only when a letter key is pressed
-         CodeMirror.commands.autocomplete(cm, null, {completeSingle: false});
-    }
+   
+<script src="package/min/vs/loader.js"></script>
+		<script>
+      var junction_font = new FontFace('JetBrains-Regular', 'url(../src/assets/fonts/JetBrainsMono-Regular.ttf)');
+junction_font.load().then(function(loaded_face) {
+	document.fonts.add(loaded_face);
+  	document.body.style.fontFamily = "JetBrains-Regular";
+}).catch(function(error) {
+	// error occurred
 });
+			require.config({ paths: { vs: 'package/min/vs' } });
+			require(['vs/editor/editor.main'], function () {
+				var editor = monaco.editor.create(document.getElementById('container'), {
+					value: ['function x() {', '\tconsole.log("Hello world!");', '}'].join('\n'),
+					language: 'javascript',
+          fontFamily: "JetBrains-Regular",
+          theme: 'myCoolTheme'
+				});
+
+     
+			});
+      
+      
+		</script>
     
-        // Plain Text
-        document.getElementById ("plainText").addEventListener ("click", usePlain, false);
-
-        function usePlain() {
-          editor.setOption('mode', 'text/plain');
-        }
-
-        // Html
-        document.getElementById ("html").addEventListener ("click", useHtml, false);
-
-        function useHtml() {
-          editor.setOption('mode', 'text/html');
-        }
-
-        // CSS
-        document.getElementById ("css").addEventListener ("click", useCSS, false);
-
-        function useCSS() {
-          editor.setOption('mode', 'text/css');
-        }
-
-        // JavaScript
-        document.getElementById ("javascript").addEventListener ("click", useJavaScript, false);
-
-        function useJavaScript() {
-          editor.setOption('mode', 'text/javascript');
-          
-        }
-
-        document.getElementById ("toggleLang").addEventListener ("click", polyglotBtn, false);
-        
-        function polyglotBtn() {
-          var polygotBox = document.getElementById("polyglot");
-          if (polygotBox.style.display === "flex") {
-            polygotBox.style.display = "none";
-          } 
-          else {
-            polygotBox.style.display = "flex";
-          }
-        }
-      }
-            
-    </script>
-
-
-    <script language="javascript" type="text/javascript" src="../src/assets/js/codemirror.js"></script>
-    <script language="javascript" type="text/javascript" src="../src/assets/js/matchbrackets.js"></script>
-    <script language="javascript" type="text/javascript" src="../src/assets/mode/perl/perl.js"></script>
-    <script language="javascript" type="text/javascript" src="../src/assets/mode/xml/xml.js"></script>
-    <script language="javascript" type="text/javascript" src="../src/assets/mode/python/python.js"></script>
-    <script language="javascript" type="text/javascript" src="../src/assets/js/javascript.js"></script>
-
-
-    <script language="javascript" type="text/javascript" src="../src/assets/addon/display/placeholder.js"></script>
-
-    <script language="javascript" type="text/javascript" src="../src/assets/addon/hint/css-hint.js"></script>
-    <script language="javascript" type="text/javascript" src="../src/assets/mode/css/css.js"></script>
-
-    <script language="javascript" type="text/javascript" src="../src/assets/addon/hint/javascript-hint.js"></script>
-    <script language="javascript" type="text/javascript" src="../src/assets/mode/javascript/javascript.js"></script>
-    <script language="javascript" type="text/javascript" src="../src/assets/addon/hint/show-hint.js"></script>
   </body>
 </html>
 
