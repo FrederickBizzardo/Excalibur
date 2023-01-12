@@ -53,6 +53,7 @@
     CodeMirror.commands.autocomplete(editor);
 });*/
 
+// Answer from Aditya Shankar
 editor.on("keyup", function (cm, event) {
 if (!cm.state.completionActive &&   /*Enables keyboard navigation in autocomplete list*/
      event.keyCode > 64 && event.keyCode < 91){// only when a letter key is pressed
