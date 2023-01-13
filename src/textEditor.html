@@ -16,7 +16,7 @@
       </button>
     </div>
 
-    <div id="container" class="font-JetBrains" style="width:800px;height:500px;border:1px solid grey">
+    <div id="container" class="font-JetBrains" class="border-y"style="width:800px;height:500px;border-right:1px solid grey">
     </div>
     
     <footer class="select-none    flex justify-end flex-col items-end fixed right-10 bottom-2 pb-4">
@@ -31,6 +31,8 @@
    
 <script src="package/min/vs/loader.js"></script>
 		<script>
+
+
       var junction_font = new FontFace('JetBrains-Regular', 'url(../src/assets/fonts/JetBrainsMono-Regular.ttf)');
 junction_font.load().then(function(loaded_face) {
 	document.fonts.add(loaded_face);
@@ -40,13 +42,31 @@ junction_font.load().then(function(loaded_face) {
 });
 			require.config({ paths: { vs: 'package/min/vs' } });
 			require(['vs/editor/editor.main'], function () {
-				var editor = monaco.editor.create(document.getElementById('container'), {
-					value: ['function x() {', '\tconsole.log("Hello world!");', '}'].join('\n'),
+				monaco.editor.defineTheme('myTheme', {
+	base: 'vs-dark',
+	inherit: true,
+	rules: [{ background: 'EDF9FA' }],
+	colors: {
+		/*'editor.foreground': '#000000',*/
+		'editor.background': '#292929',
+    'editor.selectionBackground': '#4A4A4A'
+    /*'editor.background': '#ffffff',
+		'editorCursor.foreground': '#8B0000',
+		'editor.lineHighlightBackground': '#0000FF20',
+		'editorLineNumber.foreground': '#008800',
+		'editor.selectionBackground': '#88000030',
+		'editor.inactiveSelectionBackground': '#88000015'*/
+	}
+});
+monaco.editor.setTheme('myTheme');
+
+monaco.editor.create(document.getElementById('container'), {
+	value: ['function x() {', '\tconsole.log("Hello world!");', '}'].join('\n'),
 					language: 'javascript',
           fontFamily: "JetBrains-Regular",
-          theme: 'myCoolTheme'
-				});
-
+	/*fontSize: 20*/
+          fontSize: 12
+});
      
 			});
       
@@ -55,7 +75,3 @@ junction_font.load().then(function(loaded_face) {
     
   </body>
 </html>
-
-
-
-

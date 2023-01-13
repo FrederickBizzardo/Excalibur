@@ -44,12 +44,15 @@ module.exports = {
         '999': '999',
       },
       height: {
+        '500': '500px',
         'newScreen': '95vh',
       },
       maxHeight: {
         'newScreen': '95vh',
       },
       width: {
+        
+        '800': '800px',
         '30': '6.5rem'
       }
     },

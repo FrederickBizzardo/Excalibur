@@ -731,6 +731,10 @@ video {
   height: 0.25rem;
 }
 
+.h-500 {
+  height: 500px;
+}
+
 .w-full {
   width: 100%;
 }
@@ -745,6 +749,10 @@ video {
 
 .w-1 {
   width: 0.25rem;
+}
+
+.w-800 {
+  width: 800px;
 }
 
 .flex-shrink {
@@ -856,6 +864,16 @@ video {
 .border-x-0 {
   border-left-width: 0px;
   border-right-width: 0px;
+}
+
+.border-y-0 {
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+}
+
+.border-y {
+  border-top-width: 1px;
+  border-bottom-width: 1px;
 }
 
 .border-lightGray {
