@@ -38,20 +38,19 @@ module.exports = {
         '450': '450px',
       },
       height: {
+        '26px': '26px',
+        '500': '400px',
+        'newScreen': '95vh',
         '42px': '42px',
       },
       zIndex: {
         '999': '999',
       },
-      height: {
-        '500': '500px',
-        'newScreen': '95vh',
-      },
       maxHeight: {
         'newScreen': '95vh',
       },
       width: {
-        
+        '27px': '27px',
         '800': '800px',
         '30': '6.5rem'
       }
