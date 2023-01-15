@@ -9,32 +9,38 @@
   <body class="font-JetBrains bg-drakGray overflow-hidden ">
 
     <div class="flex select-none h-42px p-1new5 w-full border bg-drakGray  border-lightGray border-x-0">
-      <button onclick="window.location.href='index.html';" class="border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px"><img class="p-2 h-26px w-27px" src="../src/assets/images/home2.svg"/></button>
-      <button class="flex justify-between items-center font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-30 px-2 py-2 ml-4">
+      <button onclick="window.location.href='index.html';" class="border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg "><img class="p-2 " src="../src/assets/images/home2.svg"/></button>
+      <button class="flex justify-between items-center font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg  w-30 px-2 py-2 ml-4">
         New File
         <a href="../src/index.html"><img class="" src="../src/assets/images/close2.svg"></a>
       </button>
     </div>
 
-    <div id="container" class="font-JetBrains" class="border-y"style="width:800px;height:500px;border-right:1px solid grey">
+    <div id="container" class="pt-5 w-screen h-500 md:w-full md:h-newScreen border-l border-lightGray" >
     </div>
     
     <footer class="select-none    flex justify-end flex-col items-end fixed right-10 bottom-2 pb-4">
-      <!--<div id="polyglot" class="hidden flex-col px-2 py-2 w-60 h-80 rounded-2xl bg-drakGray border border-lightGray mb-2">
-        <button id="plainText" class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px px-2 py-2 mb-2">Plain Text</button>
-        <button id="html" class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px px-2 py-2 mb-2">Html</button>
-        <button id="css" class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px px-2 py-2 mb-2">CSS</button>
-        <button id="javascript" class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px px-2 py-2 mb-2">JavaScript</button>
-      </div>-->
-      <button id="toggleLang" class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg h-26px w-27px px-2 py-2 ml-4">Plain Text</button>
+      <div id="polyglot" class="hidden flex-col px-2 py-2 w-60 h-80 rounded-2xl bg-drakGray border border-lightGray mb-2">
+        <button id="plainText" class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg  px-2 py-2 mb-2">Plain Text</button>
+        <button id="html" class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg hpx-2 py-2 mb-2">HTML</button>
+        <button id="css" class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg  px-2 py-2 mb-2">CSS</button>
+        <button id="javascript" class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg  px-2 py-2 mb-2">JavaScript</button>
+      </div>
+      <button id="toggleLang" class="font-JetBrains text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg  px-2 py-2 ml-4">Plain Text</button>
+      <!--<select class="text-center text-xs text-textGray border focus:outline-none hover:bg-lighterGray2 bg-lighterGray border-lightGray rounded-lg appearance-none p-2">
+        <option class="">Plain Text</option>
+        <option class="">HTML</option>
+        <option class="">CSS</option>
+        <option class="">JavaScript</option>
+      </select>-->
     </footer>
    
 <script src="package/min/vs/loader.js"></script>
 		<script>
 
 
-      var junction_font = new FontFace('JetBrains-Regular', 'url(../src/assets/fonts/JetBrainsMono-Regular.ttf)');
-junction_font.load().then(function(loaded_face) {
+      var jetbrains_font = new FontFace('JetBrains-Regular', 'url(../src/assets/fonts/JetBrainsMono-Regular.ttf)');
+jetbrains_font.load().then(function(loaded_face) {
 	document.fonts.add(loaded_face);
   	document.body.style.fontFamily = "JetBrains-Regular";
 }).catch(function(error) {
@@ -45,18 +51,20 @@ junction_font.load().then(function(loaded_face) {
 				monaco.editor.defineTheme('myTheme', {
 	base: 'vs-dark',
 	inherit: true,
-	rules: [{ background: 'EDF9FA' }],
+	rules: [{ background: '292929' }],
 	colors: {
 		/*'editor.foreground': '#000000',*/
+    /*'editor.foreground': '#00fbff',*/
+    /*'editor.foreground': '#00fbff',*/
 		'editor.background': '#292929',
-    'editor.selectionBackground': '#4A4A4A'
+    'editor.selectionBackground': '#4A4A4A',
     /*'editor.background': '#ffffff',
 		'editorCursor.foreground': '#8B0000',
 		'editor.lineHighlightBackground': '#0000FF20',
 		'editorLineNumber.foreground': '#008800',
 		'editor.selectionBackground': '#88000030',
 		'editor.inactiveSelectionBackground': '#88000015'*/
-	}
+	} 
 });
 monaco.editor.setTheme('myTheme');
 
@@ -65,12 +73,66 @@ monaco.editor.create(document.getElementById('container'), {
 					language: 'javascript',
           fontFamily: "JetBrains-Regular",
 	/*fontSize: 20*/
-          fontSize: 12
+          fontSize: 12,
+          automaticLayout: true, /* This code makes the editor responsive */
+          renderLineHighlight: "none"/* This removes selection borders */
+
 });
      
 			});
       
-      
+      // Plain Text
+      document.getElementById ("plainText").addEventListener ("click", usePlain, false);
+
+function usePlain() {
+  editor.setOption('mode', 'text/plain');
+}
+
+// Html
+document.getElementById ("html").addEventListener ("click", useHtml, false);
+
+function useHtml() {
+  editor.setOption('mode', 'text/html');
+}
+
+// CSS
+document.getElementById ("css").addEventListener ("click", useCSS, false);
+
+function useCSS() {
+  editor.setOption('mode', 'text/css');
+}
+
+// JavaScript
+document.getElementById ("javascript").addEventListener ("click", useJavaScript, false);
+
+function useJavaScript() {
+  editor.setOption('mode', 'text/javascript');
+  
+}
+
+document.getElementById ("toggleLang").addEventListener ("click", polyglotBtn, false);
+
+function polyglotBtn() {
+  var polygotBox = document.getElementById("polyglot");
+  if (polygotBox.style.display === "flex") {
+    polygotBox.style.display = "none";
+  } 
+  else {
+    polygotBox.style.display = "flex";
+  }
+}
+
+document.getElementById ("toggleLang").addEventListener ("focusout", focusOut, false);
+ function focusOut()  {
+  var polygotBox = document.getElementById("polyglot");
+  if (polygotBox.style.display === "flex") {
+    polygotBox.style.display = "none";
+  } 
+  else {
+    polygotBox.style.display = "flex";
+  }
+  
+}
 		</script>
     
   </body>
