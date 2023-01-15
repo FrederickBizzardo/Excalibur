@@ -5,6 +5,9 @@
     <title>Excalibur</title>
     <!--<link rel="stylesheet" href="index.css" />-->
     <link href="../dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="../node_modules/xterm/css/xterm.css" />
+    
+    <script src="../node_modules/xterm/lib/xterm.js"></script>
   </head>
   <body class="font-JetBrains bg-drakGray overflow-hidden ">
 
@@ -16,8 +19,14 @@
       </button>
     </div>
 
-    <div id="container" class="pt-5 w-screen h-500 md:w-full md:h-newScreen border-l border-lightGray" >
+    <!--<div id="container" class="flex items-start pt-5 w-screen h-500 md:w-full md:h-newScreen border-l border-lightGray" >
+      <div id="terminal" class="relative flex items-end"></div>
+    </div>-->
+
+    <div id="container" class="pt-5 w-screen h-500 md:w-full md:h-500 border-l border-lightGray" >
     </div>
+
+    <!--<div id="terminal" class="w-full"></div>-->
     
     <footer class="select-none    flex justify-end flex-col items-end fixed right-10 bottom-2 pb-4">
       <div id="polyglot" class="hidden flex-col px-2 py-2 w-60 h-80 rounded-2xl bg-drakGray border border-lightGray mb-2">
@@ -35,7 +44,10 @@
       </select>-->
     </footer>
    
+    <script src="../src/renderer.js"></script>
+    <!--<script src="../src/client/src/index.js"></script>
 <script src="package/min/vs/loader.js"></script>
+<script src="../node_modules/xterm/lib/xterm.js"></script>-->
 		<script>
 
 
@@ -76,7 +88,7 @@ monaco.editor.create(document.getElementById('container'), {
           fontSize: 12,
           automaticLayout: true, /* This code makes the editor responsive */
           renderLineHighlight: "none"/* This removes selection borders */
-
+          
 });
      
 			});
@@ -123,7 +135,8 @@ function polyglotBtn() {
 }
 
 document.getElementById ("toggleLang").addEventListener ("focusout", focusOut, false);
- function focusOut()  {
+ 
+function focusOut()  {
   var polygotBox = document.getElementById("polyglot");
   if (polygotBox.style.display === "flex") {
     polygotBox.style.display = "none";
@@ -133,7 +146,11 @@ document.getElementById ("toggleLang").addEventListener ("focusout", focusOut, f
   }
   
 }
+
+
 		</script>
+
+
     
   </body>
 </html>
