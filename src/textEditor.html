@@ -26,7 +26,7 @@
     <div id="container" class="pt-5 w-screen h-500 md:w-full md:h-500 border-l border-lightGray" >
     </div>
 
-    <!--<div id="terminal" class="w-full"></div>-->
+    <div id="terminal" class="w-full"></div>
     
     <footer class="select-none    flex justify-end flex-col items-end fixed right-10 bottom-2 pb-4">
       <div id="polyglot" class="hidden flex-col px-2 py-2 w-60 h-80 rounded-2xl bg-drakGray border border-lightGray mb-2">
@@ -44,10 +44,9 @@
       </select>-->
     </footer>
    
-    <script src="../src/renderer.js"></script>
-    <!--<script src="../src/client/src/index.js"></script>
+    <script src="../src/index.js"></script>
 <script src="package/min/vs/loader.js"></script>
-<script src="../node_modules/xterm/lib/xterm.js"></script>-->
+<script src="../node_modules/xterm/lib/xterm.js"></script>
 		<script>
 
 
@@ -146,7 +145,18 @@ function focusOut()  {
   }
   
 }
+var term = new Terminal({
+  //fontSize: 14,
+  fontFamily: 'JetBrains-Regular',
+  cursorBlink: true,
+  /*enableBold: true,
+  cols: 80,
+  rows: 40,
+  screenKeys: true*/
+});
 
+        term.open(document.getElementById("terminal"), false);
+        term.write('Hello from \x1B[1;3;31mxterm.js\x1B[0m $ ')
 
 		</script>
 
