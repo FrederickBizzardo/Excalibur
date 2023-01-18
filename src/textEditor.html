@@ -45,6 +45,7 @@
     </footer>
    
     <script src="../src/index.js"></script>
+    <script src="../src/renderer.js"></script>
 <script src="package/min/vs/loader.js"></script>
 <script src="../node_modules/xterm/lib/xterm.js"></script>
 		<script>
@@ -145,20 +146,23 @@ function focusOut()  {
   }
   
 }
-var term = new Terminal({
+//var term = new Terminal({
   //fontSize: 14,
-  fontFamily: 'JetBrains-Regular',
-  cursorBlink: true,
+  //fontFamily: 'JetBrains-Regular',
+  //cursorBlink: true,
   /*enableBold: true,
   cols: 80,
   rows: 40,
-  screenKeys: true*/
+  screenKeys: true
 });
 
         term.open(document.getElementById("terminal"), false);
-        term.write('Hello from \x1B[1;3;31mxterm.js\x1B[0m $ ')
+        term.write('Hello from \x1B[1;3;31mxterm.js\x1B[0m $ ')*/
 
-		</script>
+		
+    
+
+    </script>
 
 
     

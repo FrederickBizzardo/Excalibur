@@ -1,10 +1,23 @@
-const { app, BrowserWindow, Menu } = require('electron');
+const { app, BrowserWindow, Menu, mainWindow } = require('electron');
 const path = require('path');
+
+//const { spawn } = require('child_process');
+//const pty = require('node-pty');
+
+var os = require('os');
+var pty = require('node-pty');
+
+
+//const shell = process.platform === 'win32' ? 'powershell.exe' : 'bash';
+var shell = os.platform() === 'win32' ? 'powershell.exe' : 'bash';
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) {
   app.quit();
 }
+
+
+
 
 const createWindow = () => {
   // Create the browser window.
@@ -16,15 +29,68 @@ const createWindow = () => {
     minWidth: 800,
     minHeight:600,
     webPreferences: {
+      nodeIntegration: true,
       preload: path.join(__dirname, 'preload.js'),
     },
   });
+
+  //const ptyProcess = pty.spawn(shell, [], {
+  //  name: 'xterm-color',
+  //  cols: 80,
+  //  rows: 30,
+  //  cwd: process.cwd(),
+  //  env: process.env
+  //});
+
+  //ptyProcess.on('data', data => {
+  //  console.log(data);
+  //});
+
+  //ptyProcess.write('echo "Hello from PowerShell"\n');
+
+  var ptyProcess = pty.spawn(shell, [], {
+    name: 'xterm-color',
+    cols: 80,
+    rows: 30,
+    cwd: process.env.HOME,
+    env: process.env
+  });
+  
+  ptyProcess.on('data', function(data) {
+    process.stdout.write(data);
+  });
+  
+  ptyProcess.write('ls\r');
+  ptyProcess.resize(100, 40);
+  ptyProcess.write('ls\r');
+
+
+  /*const term = new Terminal();
+
+// Attach the xterm to the pty process
+term.attach(ptyProcess);
+
+// Add the xterm to the HTML
+const terminalContainer = document.getElementById('terminal');
+terminalContainer.appendChild(term.element);*/
 
   // and load the index.html of the app.
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
+
+  
+
+  /////////////////////////////////////////////////////
+  //This code was added
+  //mainWindow.webContents.on('did-finish-load', () => {
+  //  mainWindow.webContents.executeJavaScript(`require = window.require`);
+  //});
+ ///////////////////////////////////////////////////////
+
+
+
 
   // Declare all menu
   /*const menu_list = [
@@ -68,3 +134,4 @@ app.on('activate', () => {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and import them here.
+
