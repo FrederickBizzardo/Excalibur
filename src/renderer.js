@@ -19,7 +19,7 @@
 // In the renderer process
 //const { remote } = require('electron');
 //const xterm = remote.require('xterm');
-const term = new xterm.Terminal({
+/*const term = new xterm.Terminal({
   cursorBlink: true
 });
 
@@ -34,4 +34,4 @@ ipcRenderer.on('data', (event, data) => {
   
   ptyProcess.on('data', (data) => {
     ipcRenderer.send('data', data);
-  });
+  });*/
